@@ -90,8 +90,8 @@ const ReferralDetails = () => {
         <Box className="space-y-2">
           {userDetails?.map((item, index) => (
             <Box key={index} className="flex justify-between gap-2">
-              <span className="text-[13px]">{item.key}:</span>
-              <span className="text-[13px] font-bold">{item.value}</span>
+              <span className="text-[13px]">{item?.key}:</span>
+              <span className="text-[13px] font-bold">{item?.value}</span>
             </Box>
           ))}
         </Box>

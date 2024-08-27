@@ -34,7 +34,7 @@ const InfoCardDisplay = () => {
     },
     {
       title: "Matched Referrals",
-      description: referrals?.filter((item: any) => item.isMatched === true)
+      description: referrals?.filter((item: any) => item?.isMatched === true)
         .length,
       buttonText: "View All Referrals",
       link: "/dashboard/teachers",
@@ -58,7 +58,7 @@ const InfoCardDisplay = () => {
   return (
     <Grid item sm={12} md={9} className="">
       <Grid container spacing={2}>
-        {HomeCardContents.map((item, index) => (
+        {HomeCardContents?.map((item, index) => (
           <Grid item xs={12} sm={12} md={3} key={index} className="">
             <Card className="border-none">
               <Box className="flex justify-between items-center">

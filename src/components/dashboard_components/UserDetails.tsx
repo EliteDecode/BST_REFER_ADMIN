@@ -48,15 +48,15 @@ const UserDetails = () => {
   const walletDetails = [
     {
       key: "Total",
-      value: singleUser?.wallet?.total.toLocaleString(),
+      value: singleUser?.wallet?.total?.toLocaleString(),
     },
     {
       key: "Withdrawn",
-      value: singleUser?.wallet?.withdrawn.toLocaleString(),
+      value: singleUser?.wallet?.withdrawn?.toLocaleString(),
     },
     {
       key: "Balance",
-      value: balance.toLocaleString(),
+      value: balance?.toLocaleString(),
     },
   ];
 
@@ -72,8 +72,8 @@ const UserDetails = () => {
 
           {userDetails?.map((item, index) => (
             <Box key={index} className="flex justify-between gap-2">
-              <span className="text-[13px]">{item.key}:</span>
-              <span className="text-[13px] font-bold">{item.value}</span>
+              <span className="text-[13px]">{item?.key}:</span>
+              <span className="text-[13px] font-bold">{item?.value}</span>
             </Box>
           ))}
           <Box className="flex justify-between gap-2">

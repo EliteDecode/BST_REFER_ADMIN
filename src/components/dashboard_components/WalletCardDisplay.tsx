@@ -33,35 +33,35 @@ const WalletCardDisplay = () => {
 
   const approvedPercentage =
     totalWithdrawals > 0
-      ? ((approvedWithdrawals / totalWithdrawals) * 100).toFixed(2)
+      ? ((approvedWithdrawals / totalWithdrawals) * 100)?.toFixed(2)
       : "0.00";
   const pendingPercentage =
     totalWithdrawals > 0
-      ? ((pendingWithdrawals / totalWithdrawals) * 100).toFixed(2)
+      ? ((pendingWithdrawals / totalWithdrawals) * 100)?.toFixed(2)
       : "0.00";
   const declinedPercentage =
     totalWithdrawals > 0
-      ? ((declinedWithdrawals / totalWithdrawals) * 100).toFixed(2)
+      ? ((declinedWithdrawals / totalWithdrawals) * 100)?.toFixed(2)
       : "0.00";
 
   const WalletCardContents: InfoCardDisplayProps[] = [
     {
       title: "Approved Transactions",
-      description: `₦ ${approvedWithdrawals.toLocaleString()}`,
+      description: `₦ ${approvedWithdrawals?.toLocaleString()}`,
       link: "/dashboard/teachers",
       buttonText: approvedPercentage || "0.00", // Total earnings is always 100%
       image: approvedIcon,
     },
     {
       title: "Pending Transactions",
-      description: `₦ ${pendingWithdrawals.toLocaleString()}`,
+      description: `₦ ${pendingWithdrawals?.toLocaleString()}`,
       link: "/dashboard/teachers",
       buttonText: `-${pendingPercentage}` || "0.00",
       image: pendingIcon,
     },
     {
       title: "Declined Transactions",
-      description: `₦ ${declinedWithdrawals.toLocaleString()}`,
+      description: `₦ ${declinedWithdrawals?.toLocaleString()}`,
       link: "/dashboard/students",
       buttonText: `-${declinedPercentage}%`,
       image: declinedIcon,
