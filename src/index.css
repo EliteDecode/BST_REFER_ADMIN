@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Eczar:wght@400..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 100% 20%; /* #000066 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 95% 16%; /* #8a0307 */
+    --secondary-foreground: 0 0% 100%; /* white */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 240 100% 20%; /* #000066 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 95% 16%; /* #8a0307 */
+    --secondary-foreground: 0 0% 100%; /* white */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.custom-c {
+  width: 70%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .custom-c {
+    width: 95%;
+  }
+}
+
+.hero_bg {
+  background: url("./assets/images/hero/hero_bg2.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-position: 0px -100px;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .hero_bg {
+    background: url("./assets/images/hero/hero_bg2.jpg");
+    background-color: rgba(0, 0, 0, 0.7);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+}
+
+/* Center the carousel container */
+.swiper-container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Style for each slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* Background color for slides */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Image styling */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Inactive slides default styling */
+.swiper-slide {
+  transform: scale(0.8); /* Scale down the inactive slides */
+}
+
+/* Active slide is larger */
+.swiper-slide-active {
+  transform: scale(1.2); /* Scale up the active slide */
+}
+
+/* Pagination bullets styling */
+.swiper-pagination-bullet {
+  background: #7b61ff; /* Active bullet color */
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5b42e2; /* Inactive bullet color */
+  opacity: 1;
+}
+
+.swiper-nav-btns button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: hsl(240 100% 20%);
+  color: #fff;
+  margin: 0px 0.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  transition: all 0.5s;
+}
+
+.swiper-nav-btns button:hover {
+  background-color: hsl(240 100% 15%);
+  cursor: pointer;
+}
+
+/* Dashboard Navbar */
+
+.showSidebar {
+  left: 0px !important;
+}
+
+.transit {
+  transition: all 0.8s ease;
+}
+.header {
+  width: 86%;
+}
+
+.sidebar {
+  width: 14%;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    left: -10000000px;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .header {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 830px) {
+  .sidebar {
+    width: 30%;
+  }
+
+  .header {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 831px) and (max-width: 1245px) {
+  .sidebar {
+    width: 25%;
+  }
+
+  .header {
+    width: 75%;
+  }
+}
+
+/* Profile */
+.profile-header {
+  background: url("./assets/images/dashboard/profilebg.jpg");
+  background-size: contain;
+}
