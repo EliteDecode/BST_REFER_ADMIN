@@ -100,23 +100,23 @@ export const modelReferralDataToChart = (users: IReferral[]) => {
     },
   ];
 
-  users.forEach((user) => {
-    const monthIndex = new Date(user.createdAt).getMonth(); // Get the month index
+  users?.forEach((user) => {
+    const monthIndex = new Date(user?.createdAt).getMonth(); // Get the month index
 
     // Update total referrals for the month
     chartData[monthIndex].totalReferrals += 1;
 
     // Update matched referrals for the month if applicable
-    if (user.isMatched) {
+    if (user?.isMatched) {
       chartData[monthIndex].matchedReferrals += 1;
     }
 
     // Add the referrer to the set of unique referrers
-    chartData[monthIndex].uniqueReferrers.add(user.referredBy);
+    chartData[monthIndex]?.uniqueReferrers.add(user.referredBy);
   });
 
   // Convert uniqueReferrers Set to count (number of unique referrers) and calculate conversion rate
-  chartData.forEach((month) => {
+  chartData?.forEach((month) => {
     month.uniqueReferrersCount = month.uniqueReferrers.size; // Store the size of the set
     month.conversionRate =
       month.totalReferrals > 0
