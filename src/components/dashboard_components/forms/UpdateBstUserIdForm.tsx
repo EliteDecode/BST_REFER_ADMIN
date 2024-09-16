@@ -1,4 +1,4 @@
-import { addUsersInputs } from "@/utils/dashboardContents";
+import { addBstUsersIdInputs } from "@/utils/dashboardContents";
 import { Box } from "@mui/material";
 import { Typography } from "antd";
 import { Button } from "../../ui/button";
@@ -6,14 +6,14 @@ import { Input } from "../../ui/input";
 import { Label } from "../../ui/label";
 
 import ButtonSpinners from "@/helpers/ButtonSpinners";
-import useUpdateStudentForm from "@/hooks/form-hooks/useUpdateStudentForm";
+import useUpdateBstUserIdForm from "@/hooks/form-hooks/useUpdateBstUserIdForm";
 
-const UpdateStudentForm = () => {
-  const { formik, isLoading } = useUpdateStudentForm();
+const UpdateBstUserIdForm = () => {
+  const { formik, isLoading } = useUpdateBstUserIdForm();
   return (
     <Box className=" py-2">
       <form onSubmit={formik.handleSubmit}>
-        {addUsersInputs?.map((item, index) => (
+        {addBstUsersIdInputs?.map((item, index) => (
           <Box key={index}>
             <Label className="text-[11px] text-[#0009]" htmlFor={item.name}>
               {item?.label}
@@ -25,6 +25,7 @@ const UpdateStudentForm = () => {
                 "border-red-500 border"
               }`}
               id={item?.name}
+              readOnly={item.name === "bstId"} // Make bstId field read-only
               value={formik.values[item.name as keyof typeof formik.values]}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -57,4 +58,4 @@ const UpdateStudentForm = () => {
   );
 };
 
-export default UpdateStudentForm;
+export default UpdateBstUserIdForm;

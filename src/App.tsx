@@ -7,7 +7,9 @@ import {
 // routes
 import { AuthLayout, DashboardLayout } from "./components/layout";
 import {
+  AddBstId,
   AddStudent,
+  BstIds,
   Dashboard,
   Login,
   Profile,
@@ -17,6 +19,7 @@ import {
   UpdateProfile,
   Users,
   VerifyEmail,
+  ViewBstId,
   ViewReferral,
   ViewStudent,
   ViewUser,
@@ -126,6 +129,18 @@ export default function App() {
             {
               path: "settings/verify-email",
               element: <VerifyEmail />,
+            },
+            {
+              path: "bstIds",
+              element: <BstIds />,
+            },
+            {
+              path: "bstIds/addbstId",
+              element: <AddBstId />,
+            },
+            {
+              path: "bstIds/view-user/:userId",
+              element: <ViewBstId />,
             },
           ],
         },

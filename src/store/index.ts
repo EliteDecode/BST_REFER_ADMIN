@@ -1,5 +1,6 @@
 import adminSlice from "@/services/features/admin/adminSlice";
 import authSlice from "@/services/features/auth/authSlice";
+import bstUserUniqueIdsSlice from "@/services/features/bstUserUniqueIds/bstUserUniqueIdsSlice";
 import referralSlice from "@/services/features/referral/referralSlice";
 import studentSlice from "@/services/features/student/studentSlice";
 import userSlice from "@/services/features/user/userSlice";
@@ -14,6 +15,7 @@ export const store = configureStore({
     wallet: walletSlice,
     user: userSlice,
     student: studentSlice,
+    bstIds: bstUserUniqueIdsSlice,
   },
 });
 

@@ -65,6 +65,17 @@ export const addStudentSchema = Yup.object().shape({
   course: Yup.string().required("Course is required"),
 });
 
+export const addUserBstIds = Yup.object().shape({
+  fullname: Yup.string()
+    .min(2, "Fullname is too short")
+    .required("Fullname is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  phone: Yup.string().required("Phone number is required"),
+  bstId: Yup.string().required("ID is required"),
+});
+
 //AddUSer Schema
 export const updateProfileSchema = Yup.object().shape({
   fullname: Yup.string()

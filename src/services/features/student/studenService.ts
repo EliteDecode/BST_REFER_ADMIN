@@ -30,12 +30,12 @@ const update_student_details = async (student: IStudent) => {
     studentData
   );
 
-  if (response.data.success === true) {
-    localStorage.setItem(
-      "BST_Admin_students",
-      JSON.stringify(response.data.data)
-    );
-  }
+  // if (response.data.success === true) {
+  //   localStorage.setItem(
+  //     "BST_Admin_students",
+  //     JSON.stringify(response.data.data)
+  //   );
+  // }
   return response.data;
 };
 

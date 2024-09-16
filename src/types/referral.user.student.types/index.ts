@@ -102,3 +102,34 @@ export interface IStudentTable {
   createdAt: Date;
   _id: string;
 }
+
+//===================================================Users Unique Ids=========================
+export interface IBstUserUniqueIds {
+  fullname: string;
+  phone: string;
+  email: string;
+  isIdUsed?: boolean;
+  bstId: string;
+  _id?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface initialUserUniqueStateProps {
+  isLoading: boolean;
+  isSuccess: boolean;
+  isError: boolean;
+  message: string;
+  singleUser: IStudent | null;
+  users: IBstUserUniqueIds[] | null;
+}
+
+export interface IBstUserUniqueIdsTables {
+  fullname: string;
+  phone: string;
+  email: string;
+  bstId: string;
+  isIdUsed: boolean;
+  createdAt: Date;
+  _id: string;
+}

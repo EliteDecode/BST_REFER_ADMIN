@@ -30,6 +30,10 @@ const ReferralDetails = () => {
 
   const userDetails = [
     {
+      key: "Username",
+      value: singleReferral?.user?.username,
+    },
+    {
       key: "Fullname",
       value: singleReferral?.user?.fullname,
     },

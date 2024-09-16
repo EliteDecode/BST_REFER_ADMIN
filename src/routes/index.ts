@@ -41,3 +41,8 @@ export const UpdateProfile = lazy(
   () => import("../pages/Dashboard/UpdateProfile")
 );
 export const VerifyEmail = lazy(() => import("../pages/Dashboard/VerifyEmail"));
+
+//Bst Unique Ids
+export const BstIds = lazy(() => import("../pages/Dashboard/UserBstIds"));
+export const AddBstId = lazy(() => import("../pages/Dashboard/AddUserBstIds"));
+export const ViewBstId = lazy(() => import("../pages/Dashboard/ViewUserBstId"));

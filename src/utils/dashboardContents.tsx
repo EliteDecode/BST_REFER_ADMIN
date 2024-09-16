@@ -7,6 +7,7 @@ import { PiStudentFill } from "react-icons/pi";
 import { FaCheckToSlot } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
+import { HiIdentification } from "react-icons/hi2";
 
 const path = window.location.pathname;
 
@@ -39,7 +40,7 @@ export const sideBarLinks = [
     ],
   },
   {
-    title: " Management",
+    title: "Management",
     content: [
       {
         Title: "All Referrals",
@@ -60,6 +61,16 @@ export const sideBarLinks = [
           />
         ),
         link: "students",
+      },
+      {
+        Title: "All Unique Identifier",
+        Icon: (
+          <HiIdentification
+            className={`${path.includes("bstIds") ? "text-primary" : "text-gray-500"}`}
+            size={16}
+          />
+        ),
+        link: "bstIds",
       },
       {
         Title: "All Users",
@@ -276,6 +287,34 @@ export const addUsersInputs = [
     type: "text",
     name: "course",
     placeholder: "Enter course",
+  },
+];
+
+//Add Bst User Id
+export const addBstUsersIdInputs = [
+  {
+    label: "Full Name",
+    type: "text",
+    name: "fullname",
+    placeholder: "Enter full name",
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    name: "email",
+    placeholder: "Enter email address",
+  },
+  {
+    label: "Phone Number",
+    type: "tel",
+    name: "phone",
+    placeholder: "Enter phone number",
+  },
+  {
+    label: "BST Identifier",
+    type: "text",
+    name: "bstId",
+    placeholder: "Enter BST ID",
   },
 ];
 
